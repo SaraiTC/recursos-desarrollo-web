@@ -1,0 +1,665 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Recursos para el desarrollo web</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e5cbb137-adfc-4385-b41b-78b862b0f5b3" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🖊️</span></div><h1 class="page-title">Recursos para el Desarrollo Web </h1></header><div class="page-body"><h2 id="3def5c8f-1465-4ea9-8023-235bccf973bd" class="block-color-blue_background">Índice</h2><nav id="dbf08d3f-fc8f-4ec1-8ac4-4d62ca117ac1" class="block-color-blue_background table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3def5c8f-1465-4ea9-8023-235bccf973bd">Índice</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#576c5d4b-d12a-45eb-a87f-338802a448cb"><mark class="highlight-gray_background">Herramientas en general</mark></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4f650fec-9f36-4e84-9f3a-caac4dc9bd98">Bancos de imágenes</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#69eb0fb3-d32e-4d5d-9057-324be4f39f25">Colores</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#d1644f51-b5e2-4d08-95c1-9ea0c35a77ab">Recursos de HTML</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#16216654-9ed8-4783-9d3e-26a2f04e41b1">Recursos de CSS</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7bb228e5-d7aa-4ef6-886b-7f1c0c18e2a7">Imágenes</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6e1fcd64-af37-44dd-ad21-9e74dd9a8041">Recursos para JS</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4969a869-3e15-41ef-8f3c-4c56b976e471">Snippets</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2cf007c4-6997-449e-ac75-ae341a69aca8">Textos</a></div></nav><h2 id="576c5d4b-d12a-45eb-a87f-338802a448cb" class=""><mark class="highlight-gray_background">Herramientas en general</mark></h2><ul id="c479e783-d96e-456d-902a-606d9de81d61" class="bulleted-list"><li style="list-style-type:disc">Hidden Tools</li></ul><figure id="5e6af098-a82c-4b33-a46c-d173057ce002"><a href="https://hiddentools.dev/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Hidden Tools - Discover a collection of tools</div><div class="bookmark-description">Explore a collection of tools to use for your next project. Search, filter, and find tools from a ton different categories.</div></div><div class="bookmark-href"><img src="https://hiddentools.dev/favicon.ico" class="icon bookmark-icon"/>https://hiddentools.dev/</div></div></a></figure><ul id="caa34a44-aa65-4e78-b728-89a97d7ca20f" class="bulleted-list"><li style="list-style-type:disc">Excalideck</li></ul><figure id="179995b3-e63f-4f96-baf6-8a87572ac5eb"><a href="https://excalideck.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Excalideck | Weapon for Legendary Slides</div><div class="bookmark-description">Excalideck is an app for authoring slide decks that look hand-drawn.</div></div><div class="bookmark-href"><img src="https://excalideck.com/favicon.eb711d7f.ico" class="icon bookmark-icon"/>https://excalideck.com/</div></div><img src="https://excalideck.com/assets/misc/og-image.png" class="bookmark-image"/></a></figure><ul id="1a730243-60b5-40b9-8370-a2e368eb786b" class="bulleted-list"><li style="list-style-type:disc">Generador de Readme</li></ul><figure id="3ada731e-2819-492d-898a-563e264f6cec"><a href="https://readme.so/es" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">readme.so</div><div class="bookmark-description">Use readme.so&#x27;s markdown editor and templates to easily create a ReadMe for your projects</div></div><div class="bookmark-href"><img src="https://readme.so/favicon.ico" class="icon bookmark-icon"/>https://readme.so/es</div></div><img src="https://readme.so/readme.png" class="bookmark-image"/></a></figure><ul id="17673378-0be5-4a6c-84bd-88981bacf5e4" class="bulleted-list"><li style="list-style-type:disc">Undesign: Tools &amp; Resources</li></ul><figure id="c314731d-5aed-411f-9dd7-8267b943d66a"><a href="https://undesign.learn.uno/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Undesign</div><div class="bookmark-description">Collection of free design tools and resources for makers, developers and designers</div></div><div class="bookmark-href"><img src="https://undesign.learn.uno/_nuxt/icons/icon_64x64.669842.png" class="icon bookmark-icon"/>https://undesign.learn.uno/?s=09</div></div><img src="https://undesign.learn.uno/images/logos/interactor.png" class="bookmark-image"/></a></figure><ul id="1286128e-47ac-41fc-98a1-052c8195fa2d" class="bulleted-list"><li style="list-style-type:disc">Unscreen </li></ul><figure id="40e84347-3d1a-40e3-9faa-52f1774dbd4c"><a href="https://www.unscreen.com/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Remove Video Background - Unscreen</div><div class="bookmark-description">Remove the background of any video - 100% automatically, online &amp; free! Goodbye Greenscreen. Hello Unscreen.</div></div><div class="bookmark-href"><img src="https://www.unscreen.com/favicon-128.png" class="icon bookmark-icon"/>https://www.unscreen.com/?s=09</div></div><img src="https://www.unscreen.com/remove_video_background.jpg" class="bookmark-image"/></a></figure><ul id="ef798a56-bdbe-43bd-9444-7f730b25bc3b" class="bulleted-list"><li style="list-style-type:disc">Free Frontend</li></ul><figure id="f3d37852-ef4e-42d9-85be-152f7b3772ec"><a href="https://freefrontend.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Free Frontend</div><div class="bookmark-description">Free hand-picked HTML, CSS and JavaScript (jQuery, React, Vue) code examples, tutorials and articles.</div></div><div class="bookmark-href"><img src="https://freefrontend.com/favicon.ico" class="icon bookmark-icon"/>https://freefrontend.com/</div></div><img src="https://freefrontend.com/assets/img/css-magazine-layouts/Magazine-Layout-HTML-CSS.jpg" class="bookmark-image"/></a></figure><ul id="afc8ea64-2f70-4ae7-956e-3946db13661e" class="bulleted-list"><li style="list-style-type:disc">Front-end tools</li></ul><figure id="11bc6a9f-bcc2-4413-8d2c-aa6a9266dd0d"><a href="https://github.com/enBonnet/Frontend-Tools/blob/master/README.md" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Frontend-Tools/README.md at master · enBonnet/Frontend-Tools</div><div class="bookmark-description">Community frontend tools for developers. Contribute to enBonnet/Frontend-Tools development by creating an account on GitHub.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/enBonnet/Frontend-Tools/blob/master/README.md</div></div><img src="https://repository-images.githubusercontent.com/175459737/1aa9be80-61ce-11e9-8c26-8b1129e83dba" class="bookmark-image"/></a></figure><ul id="ee470579-a359-4f64-84df-fcca11025e05" class="bulleted-list"><li style="list-style-type:disc">Cheatsheets de múltiples tecnologías</li></ul><figure id="0e06bd3a-bb7e-4f05-96b9-6625f479ac7b"><a href="https://overapi.com/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">OverAPI.com | Collecting all the cheat sheets</div><div class="bookmark-description">OverAPI.com is a site collecting all the cheatsheets,all!</div></div><div class="bookmark-href"><img src="https://overapi.com/favicon.ico" class="icon bookmark-icon"/>https://overapi.com/?s=09</div></div><img src="https://overapi.com/static/images/overapi-logo.png" class="bookmark-image"/></a></figure><ul id="615a827e-d2a8-49a3-b973-315a6329c567" class="bulleted-list"><li style="list-style-type:disc">Dev resources</li></ul><figure id="9b3af60d-1fac-4f7a-819a-764e7ee58e6a"><a href="https://devresourc.es/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Dev Resources</div><div class="bookmark-description">A collection of 2000+ resources for developers presented in curated lists. Learn programming, find a new job, discover your next favourite podcast, improve your workflow and a lot more.</div></div><div class="bookmark-href"><img src="https://devresourc.es/favicon-32x32.png?v=a7bb8103873a8051df36d3782fd8da0f" class="icon bookmark-icon"/>https://devresourc.es/?s=09</div></div><img src="https://res.cloudinary.com/dev-resources/image/upload/q_auto,w_1200/v1623007861/media/thumbnail_q80ffh.png" class="bookmark-image"/></a></figure><ul id="d484c35f-d4b6-424d-91d5-f0779a3469f7" class="bulleted-list"><li style="list-style-type:disc">Land-book: Inspiración para sitios web</li></ul><figure id="c27b675b-c7fe-4b29-9f3c-ee46845c70f6"><a href="https://land-book.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Land-book - website design inspiration gallery</div><div class="bookmark-description">Web design gallery with hand-picked website design examples. From 2013 we help creatives find inspiration &amp; motivation to create their best work.</div></div><div class="bookmark-href"><img src="https://land-book.com/images/favicon.png" class="icon bookmark-icon"/>https://land-book.com/</div></div><img src="http://land-book.com/images/facebook-ad.png" class="bookmark-image"/></a></figure><h2 id="4f650fec-9f36-4e84-9f3a-caac4dc9bd98" class="">Bancos de imágenes</h2><div id="8e27876b-667e-4148-9fb3-e8fdffe139ef" class="column-list"><div id="de3e3c40-58ec-496b-9430-5720633f11b8" style="width:50%" class="column"><ul id="1d5483d9-2be2-4968-89a9-5982e513dfa8" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.pexels.com/es-es/">Pexels </a></li></ul></div><div id="7ea1cb24-468c-4982-bed4-c0ff4fe81899" style="width:50%" class="column"><ul id="6115583e-1a40-401e-b454-b82956872ca8" class="bulleted-list"><li style="list-style-type:disc"><a href="https://flat-icons.com/">Flat Icons</a></li></ul></div></div><div id="9dacaf35-4f46-4066-98a6-7a366bd629e2" class="column-list"><div id="cdec0859-f88d-4919-9d23-ddfd122c4309" style="width:50%" class="column"><ul id="6a523f62-2b43-4f0f-bdc2-36751e86fb61" class="bulleted-list"><li style="list-style-type:disc"><a href="https://unsplash.com/">Unsplash</a></li></ul></div><div id="6abec342-b08f-47aa-a586-37ad453b525d" style="width:50%" class="column"><ul id="a2b0e441-1233-4e65-9397-8c39a7c3c1d3" class="bulleted-list"><li style="list-style-type:disc"><a href="https://illlustrations.co/">Illustrations</a> </li></ul></div></div><div id="d4748d9e-07ee-41e5-92e4-51fbf50f5313" class="column-list"><div id="317fda9d-73f4-4d65-a6ff-f446f288533f" style="width:50%" class="column"><ul id="28613af3-afc8-40b1-abd7-81cfcdb2c851" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.librelogos.org/">LibreLogos</a> </li></ul></div><div id="b6f741c4-0607-4dab-957f-89f3224f5db6" style="width:50%" class="column"><ul id="fbdeb66d-4c69-43ba-a653-37e00ecdff39" class="bulleted-list"><li style="list-style-type:disc"><a href="https://logoipsum.com/">Logoipsum</a></li></ul></div></div><div id="e0c80b7b-bfc9-4e51-ac83-cd0d2837b723" class="column-list"><div id="b3ef1d0e-e791-4d6d-8649-338082a4c8e2" style="width:50%" class="column"><ul id="6fdbf3cd-e285-49f5-8139-c97546998a7a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://iconscout.com/icon-editor/">Icon Scout:</a> Cambiar color de los svg</li></ul></div><div id="6a3d04d3-1fd0-4b3c-8754-6a47b033acfd" style="width:50%" class="column"><ul id="b122ad6f-8ad5-4bf2-bf39-de8ecc77ae68" class="bulleted-list"><li style="list-style-type:disc"><a href="https://3dicons.co/">3dicons</a></li></ul></div></div><div id="d7505692-0ccb-465f-8c5c-1702e34cc1ad" class="column-list"><div id="657baf23-2c4e-4cb1-ac41-3ef06d120052" style="width:50%" class="column"><ul id="5d8acbb8-9b23-44ab-afcd-f9c9c79ee1f3" class="bulleted-list"><li style="list-style-type:disc"><a href="https://lottiefiles.com/">LottieFiles</a> (Animaciones)</li></ul></div><div id="18d49f5f-2786-4f27-9b06-85703a3eb5d0" style="width:50%" class="column"><ul id="3f13a148-a18f-40d8-9584-7d3ba5e7e831" class="bulleted-list"><li style="list-style-type:disc"><a href="https://bgjar.com/?s=09">BG Jar</a> (Generador de SVG)</li></ul></div></div><div id="42a9388e-a111-41b0-8465-9690fccc0827" class="column-list"><div id="206d1d2c-1ab2-4231-a955-0cec1ec27fe9" style="width:50%" class="column"><ul id="3db28b5d-946b-459c-a6d9-ad83bc165116" class="bulleted-list"><li style="list-style-type:disc"><a href="https://patternico.com/emoji/">Patternico</a></li></ul><p id="be564137-1461-42ea-9bfa-214ec4827bd6" class="">
+</p><ul id="34efa5cf-3442-41e3-b0e5-de4d0c298236" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.svgrepo.com/">SVG Repo</a></li></ul></div><div id="f9da960b-5c34-499b-884f-72bf60e2a147" style="width:50%" class="column"><ul id="81dd3799-e8aa-4bd6-993c-f166ef1d9679" class="bulleted-list"><li style="list-style-type:disc"><a href="https://uxwing.com/">Uxwing</a></li></ul></div></div><h2 id="69eb0fb3-d32e-4d5d-9057-324be4f39f25" class="">Colores</h2><ul id="cafa4656-5f21-4c0d-8100-1fdd7cc9ea6f" class="bulleted-list"><li style="list-style-type:disc">Colordoo: Top Color Trends</li></ul><figure id="3a5bf86a-e1f7-4f26-8aa7-3653d8c9fafb"><a href="https://designkiki.com/colordoo/?ref=hiddentools" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Home - Colordoo</div><div class="bookmark-description">Home</div></div><div class="bookmark-href"><img src="https://designkiki.com/colordoo/wp-content/uploads/2020/05/colordoo_icon-e1589706732226.png" class="icon bookmark-icon"/>https://designkiki.com/colordoo/?ref=hiddentools</div></div><img src="https://designkiki.com/colordoo/wp-content/uploads/2020/05/Layer_1.png" class="bookmark-image"/></a></figure><p id="d3c0656a-8992-4371-b72e-bb97a027efd2" class="">
+</p><ul id="f2c58469-c92e-43de-89d4-41c00879f0fc" class="bulleted-list"><li style="list-style-type:disc">Paletas de colores utilizadas a lo largo de la historia</li></ul><figure id="55b4522a-de7c-48b0-942e-e90b0541e686"><a href="https://colorleap.app/home" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Color Leap - History&#x27;s Palettes</div><div class="bookmark-description">Search through 180 Color Palettes used throughout the last 4000 years. Find color combinations that stand the test of time and spark your imagination from history&#x27;s masters.</div></div><div class="bookmark-href"><img src="https://colorleap.app/favicon.ico" class="icon bookmark-icon"/>https://colorleap.app/home</div></div><img src="https://firebasestorage.googleapis.com/v0/b/color-leap-59240.appspot.com/o/CLmeta.png?alt=media&amp;token=dea509fc-2dee-44cb-a05e-b8e6218fc9f9" class="bookmark-image"/></a></figure><ul id="cd8e92df-f5b2-4985-bf74-5618e9aa239b" class="bulleted-list"><li style="list-style-type:disc">Happy Hues</li></ul><figure id="2c940a5a-821c-4cfe-b9f6-93a2151fb0c1"><a href="https://www.happyhues.co/palettes/9" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Happy Hues - Curated colors in context.</div><div class="bookmark-description">Hi there 👋 My name is Mackenzie Child, I&#x27;m the maker of Happy Hues. One of my favorite things to do is launch fun, useful and sometimes silly side-projects that I think should exist outside my head :) My goal with Happy Hues was to try to remove the issue where you know you like a color palette, but you&#x27;re unsure about how to apply it to your design or illustration.</div></div><div class="bookmark-href"><img src="https://assets.website-files.com/5dd40aa8049df8748c72d0ee/5dd9b94105da589ba59c4907_happy-hues-fav.png" class="icon bookmark-icon"/>https://www.happyhues.co/palettes/9</div></div><img src="https://assets.website-files.com/5dd40aa8049df8748c72d0ee/5ddd471cbe5e6601554a2a4d_happy-hues.jpeg" class="bookmark-image"/></a></figure><ul id="7e14eaad-6e88-4e7c-961f-7f8e7672bb52" class="bulleted-list"><li style="list-style-type:disc">Image to Material Palette Tool (extrae la paleta de colores de una imagen)</li></ul><figure id="58ccfbd0-8420-4c5b-8823-c6ae9f9ef61a"><a href="https://www.colorion.co/image-to-material" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Colorion</div><div class="bookmark-description">Curated Color Palettes with Search and Tags Support</div></div><div class="bookmark-href">https://www.colorion.co/image-to-material</div></div><img src="http://www.colorion.co/assets/img/colorion1.png" class="bookmark-image"/></a></figure><ul id="b8a2bdf3-15b5-4d74-9429-ea711b71ebf5" class="bulleted-list"><li style="list-style-type:disc">Base colors </li></ul><figure id="e5c67cc4-4c46-4e73-847d-3fd9ab310a29"><a href="https://www.colorion.co/base-colors" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Colorion</div><div class="bookmark-description">Curated Color Palettes with Search and Tags Support</div></div><div class="bookmark-href">https://www.colorion.co/base-colors</div></div></a></figure><ul id="e52020e6-aa89-4fc6-8a53-8643cfbbe6d6" class="bulleted-list"><li style="list-style-type:disc">Generador de contrastes accesibles</li></ul><figure id="9f4a2b34-2410-4676-82d9-0959f2f953f3"><a href="https://learnui.design/tools/accessible-color-generator.html?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The Accessible Color Generator</div><div class="bookmark-description">A tool for creating color variations on a base color to meet WCAG AA or AAA color contrast ratio guidelines.</div></div><div class="bookmark-href"><img src="https://learnui.design/favicon.ico" class="icon bookmark-icon"/>https://learnui.design/tools/accessible-color-generator.html?s=09</div></div><img src="https://learnui.design/tools/img/twitter-large-a11y.png" class="bookmark-image"/></a></figure><ul id="8e0c6781-e96e-40f2-90fc-29d416f279ea" class="bulleted-list"><li style="list-style-type:disc">Colormind: Generador de paletas de colores basado en deep learning</li></ul><figure id="b39afcee-1226-4bd2-9abb-35c2b2311022"><a href="http://colormind.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Colormind color palette generator</div><div class="bookmark-description">If no colors are locked Colormind will generate color palettes at random. If you have a specific starting color in mind, pick that color and lock it. The location of the color does matter, so experiment with different placements.</div></div><div class="bookmark-href"><img src="http://colormind.io/favicon16.gif" class="icon bookmark-icon"/>http://colormind.io/</div></div></a></figure><ul id="6b404940-5685-4649-af68-02ef5fb141c0" class="bulleted-list"><li style="list-style-type:disc">Mycolor </li></ul><figure id="8a52aa92-1507-42cb-8799-cf4b552242a1"><a href="https://mycolor.space/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ColorSpace - Color Palettes Generator and Color Gradient Tool</div><div class="bookmark-description">Here you can find the perfect matching color scheme for your next project! Generate nice color palettes, color gradients and much more! Your space for everything that has to do with color!</div></div><div class="bookmark-href"><img src="https://mycolor.space/favicon5.png" class="icon bookmark-icon"/>https://mycolor.space/?s=09</div></div><img src="https://mycolor.space/img/color-space-logo.png" class="bookmark-image"/></a></figure><h2 id="d1644f51-b5e2-4d08-95c1-9ea0c35a77ab" class="">Recursos de HTML</h2><p id="28405c92-68d6-4ac0-b3dd-4842017ce89e" class="">
+</p><ul id="8fd788de-bc77-4bd7-83b7-fb6093f30e19" class="bulleted-list"><li style="list-style-type:disc">¿Elementos en línea o en bloque?👇🏻</li></ul><figure id="e8ee953b-0660-47da-89e5-39a8f2c05f40"><a href="https://htmlreference.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">HTML Reference</div><div class="bookmark-description">A free guide to all HTML elements and attributes.</div></div><div class="bookmark-href"><img src="https://htmlreference.io/favicons/favicon.ico?v=201702051021" class="icon bookmark-icon"/>https://htmlreference.io/</div></div><img src="https://htmlreference.io/images/html-reference-share.png" class="bookmark-image"/></a></figure><ul id="b7773c81-0b37-4500-9a59-b1241187dc9d" class="bulleted-list"><li style="list-style-type:disc">Sketch to code: convierte sketches en HTML</li></ul><figure id="507ecc96-272e-45bd-8801-9283fd481043"><a href="https://sketch2code.azurewebsites.net/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Transform sketches into HTML using AI</div><div class="bookmark-description">Take a handwritten UI design and transform it into a valid HTML code</div></div><div class="bookmark-href"><img src="https://sketch2code.azurewebsites.net/content/img/favicon.ico" class="icon bookmark-icon"/>https://sketch2code.azurewebsites.net/</div></div></a></figure><ul id="c069b29f-390e-450d-9020-e7c6c49eb013" class="bulleted-list"><li style="list-style-type:disc">HTML Cheatsheet</li></ul><figure id="c860ff02-cc0c-45d6-b7aa-d65a37679aac"><a href="https://htmlcheatsheet.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">HTML Cheat Sheet</div><div class="bookmark-description">HTML Cheat Sheet contains useful code examples and web developer tools, markup generators and more on a single page. Switch to other web developer sheets, like CSS or JavaScript. These pages were created as a quick guide for those who already know how to work with these languages.</div></div><div class="bookmark-href"><img src="https://htmlcheatsheet.com/favicon.ico" class="icon bookmark-icon"/>https://htmlcheatsheet.com/</div></div><img src="https://htmlcheatsheet.com/images/html-cheatsheet.jpg" class="bookmark-image"/></a></figure><ul id="606d0031-50f5-4d1b-831a-36bdd47a7966" class="bulleted-list"><li style="list-style-type:disc">HTML Templates</li></ul><figure id="62f20d15-c282-4ef2-9ff8-b478b4c0f218"><a href="https://inovatik.com/?ref=devresourc.es&amp;s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Free HTML Templates Websites And Landing Pages by Inovatik</div><div class="bookmark-description">Hi I&#x27;m Lucian, a web developer passionate about creating HTML templates for websites and landing pages. I am working on an ebook based on my couple of years experience with creating and selling HTML templates on top marketplaces and on my own websites.</div></div><div class="bookmark-href"><img src="https://inovatik.com/images/favicon.png" class="icon bookmark-icon"/>https://inovatik.com/?ref=devresourc.es&amp;s=09</div></div><img src="https://inovatik.com/images/inovatik-html-templates.jpg" class="bookmark-image"/></a></figure><h2 id="16216654-9ed8-4783-9d3e-26a2f04e41b1" class="">Recursos de CSS</h2><p id="9b0b3971-a426-4901-8f32-92636469eeb4" class="">
+</p><ul id="f692a468-f270-41f0-a849-992ad86e2334" class="bulleted-list"><li style="list-style-type:disc">Generador de animaciones para textos: </li></ul><figure id="94fbfaf5-574b-4203-b29c-ca905c6db168"><a href="https://cssanimation.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CSS Animation Library for Developers and Ninjas</div><div class="bookmark-description">Created and maintained by Pavel - Web Designer &amp; Animator, Creative explorer and hungry for something different. Why Animate &amp; Why cssanimation.io All your issues, pull requests and stars are welcome, contributed by Please send feedback through codepen.io - [cssanimation] | facebook -[cssanimation.io] | twitter -[@cssanimationio] | E-Mail -[hello@cssanimation.io] Use Google Chrome for a better experience.</div></div><div class="bookmark-href"><img src="https://cssanimation.io/images/favicon.png" class="icon bookmark-icon"/>https://cssanimation.io/</div></div><img src="https://cssanimation.io/images/github.png" class="bookmark-image"/></a></figure><ul id="9e36a76c-8147-48b2-be19-1d9cdaf2ce14" class="bulleted-list"><li style="list-style-type:disc">Librería de Snippets: </li></ul><figure id="113cee2d-4279-4e51-ad0c-69e926ac8eb5"><a href="https://www.30secondsofcode.org/css/p/1" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CSS Snippets - 30 seconds of code</div><div class="bookmark-description">30 seconds of code uses cookies to provide a high quality user experience and gather anonymized data for statistical analysis of the website&#x27;s traffic. You can learn more by reading our cookie policy.By clicking &quot;Accept&quot; you accept their installation.</div></div><div class="bookmark-href"><img src="https://www.30secondsofcode.org/assets/icons/favicon-32x32.png?v=305c210420234555" class="icon bookmark-icon"/>https://www.30secondsofcode.org/css/p/1</div></div><img src="https://www.30secondsofcode.org/assets/logo.png" class="bookmark-image"/></a></figure><ul id="01f9556d-ca62-40f6-93b3-3a8fad782bd2" class="bulleted-list"><li style="list-style-type:disc">Generador de gradientes para backgrounds: </li></ul><figure id="e5b64625-0cae-408b-8c66-1b4148186b05"><a href="https://cssgradient.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CSS Gradient - Generator, Maker, and Background</div><div class="bookmark-description">About this tool CSS Gradient is a happy little website and free tool that lets you create a gradient background for websites. Besides being a css gradient generator, the site is also chock-full of colorful content about gradients from technical articles to real life gradient examples like Stripe and Instagram.</div></div><div class="bookmark-href"><img src="https://cssgradient.io/images/favicon-23859487.png" class="icon bookmark-icon"/>https://cssgradient.io/</div></div><img src="https://cssgradient.io/images/css-gradient-share-23a5b71f.png" class="bookmark-image"/></a></figure><ul id="bf5bb9b2-107c-4a08-8400-547c56df5ce6" class="bulleted-list"><li style="list-style-type:disc">Generador de gradientes para botones: </li></ul><figure id="ea31620f-ec93-489f-8009-d6024cb07549"><a href="https://gradients.party/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Gradients Party</div><div class="bookmark-description">Gradients Party is a collection of gradients for your buttons.</div></div><div class="bookmark-href"><img src="https://gradients.party/favicon.ico" class="icon bookmark-icon"/>https://gradients.party/</div></div><img src="https://gradients.party/assets/img/preview.png" class="bookmark-image"/></a></figure><ul id="bd1c3fa3-bd35-439d-a19d-afc86f4707b3" class="bulleted-list"><li style="list-style-type:disc">Layout generator</li></ul><figure id="50b4c7a8-1095-4c18-9ec7-1e06ae4a8bf7"><a href="https://grid.layoutit.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Layoutit Grid - CSS Grids layouts made easy!</div><div class="bookmark-description">Quickly design web layouts, and get HTML and CSS code. Learn CSS Grid visually and build web layouts with our interactive CSS Grid Generator.</div></div><div class="bookmark-href"><img src="https://grid.layoutit.com/favicon.ico" class="icon bookmark-icon"/>https://grid.layoutit.com/</div></div><img src="https://raw.githubusercontent.com/Leniolabs/layoutit-grid/main/assets/layoutit-grid-showcase-v2.gif" class="bookmark-image"/></a></figure><ul id="12643913-6654-499f-a3aa-71f69aee70dc" class="bulleted-list"><li style="list-style-type:disc">Shadow generator</li></ul><figure id="67794647-82eb-4330-8394-2b7e5e54abc0"><a href="https://www.joshwcomeau.com/shadow-palette/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CSS Shadow Palette Generator</div><div class="bookmark-description">Friendly tutorials for developers. Focus on React, CSS, Animation, and more!</div></div><div class="bookmark-href"><img src="https://www.joshwcomeau.com/assets/favicon.png?v=4" class="icon bookmark-icon"/>https://www.joshwcomeau.com/shadow-palette/</div></div><img src="https://www.joshwcomeau.com/images/og-announcing-shadow-palette-generator.png" class="bookmark-image"/></a></figure><ul id="8ff16253-9eb3-4abd-ac3a-cbd898161967" class="bulleted-list"><li style="list-style-type:disc">Gradientes</li></ul><figure id="3d816d7c-81e0-4f03-b17f-a9ecef0aba92"><a href="https://gradienta.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Multicolor CSS Gradients, JPG Downloads, 100% Free!</div><div class="bookmark-description">Pure CSS Code, JPG Download, Open Source! Red Leaks 182 Carefully Crafted Gradientas Gradients are fun to do, but i always tried to make it visually appealing. Every gradient has been made with a care from the heart!</div></div><div class="bookmark-href"><img src="https://gradienta.io/favicon.ico" class="icon bookmark-icon"/>https://gradienta.io/</div></div><img src="https://gradienta.io/static/thumbnail/thumbnail.jpg" class="bookmark-image"/></a></figure><ul id="fe1e8d7b-585e-4c9c-a2a9-f9963a68004c" class="bulleted-list"><li style="list-style-type:disc">Toggles </li></ul><figure id="63922914-89b3-424c-9e64-87e8786a8d83"><a href="https://jnkkkk.github.io/MoreToggles.css/allToggles.html" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">MoreToggles.css - All Styles</div><div class="bookmark-description">A pure CSS library that provides you with a variety of nice-looking toggles.</div></div><div class="bookmark-href">https://jnkkkk.github.io/MoreToggles.css/allToggles.html</div></div></a></figure><ul id="7afa2e7d-e898-4cc5-9020-dda3e0f94494" class="bulleted-list"><li style="list-style-type:disc">Neuromorphism</li></ul><figure id="cf3891ad-ead3-4006-8c31-5438f7168855"><a href="http://neumorphism.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Neumorphism/Soft UI CSS shadow generator</div><div class="bookmark-description">CSS code generator that will help with colors, gradients and shadows to adapt this new design trend or discover its posibilities.</div></div><div class="bookmark-href"><img src="https://neumorphism.io/android-chrome-192x192.png" class="icon bookmark-icon"/>http://neumorphism.io/</div></div><img src="https://neumorphism.io/ogImage.png" class="bookmark-image"/></a></figure><ul id="f94809fa-06d2-4af7-9869-e15de04cd658" class="bulleted-list"><li style="list-style-type:disc">Glassmorphism</li></ul><figure id="74dad158-8050-4a39-ba2f-620af5d3c506"><a href="https://hype4.academy/tools/glassmorphism-generator" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Glassmorphism CSS Generator | Hype4 Academy</div><div class="bookmark-description">Glassmorphism is a unified name for the popular Frosted Glass aesthetic.</div></div><div class="bookmark-href"><img src="https://hype4.academy/favicon/favicon.ico" class="icon bookmark-icon"/>https://hype4.academy/tools/glassmorphism-generator</div></div><img src="https://hype4.academy/glassmorphismOgImage.png" class="bookmark-image"/></a></figure><ul id="a2d982df-db5e-4b1b-9bfc-75e0f61873f2" class="bulleted-list"><li style="list-style-type:disc">Generador de botones </li></ul><figure id="33651b8e-57c2-4df7-a209-0ff2c130d75e"><a href="http://css3buttongenerator.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CSS Button Generator</div><div class="bookmark-description">© Copyright. . CSS Button Generator. All Rights Reservered. Terms | Site Map</div></div><div class="bookmark-href"><img src="https://css3buttongenerator.com/images/icon_star1.png" class="icon bookmark-icon"/>http://css3buttongenerator.com/</div></div></a></figure><ul id="98de57d3-c660-41d2-8a4d-e3611a9108cf" class="bulleted-list"><li style="list-style-type:disc">Searchbox generator</li></ul><figure id="907f7c19-abb3-4d4b-9fb1-062a36293c1c"><a href="https://shipow.github.io/searchbox/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Searchbox Generator</div><div class="bookmark-description">Searchbox is an html/css/scss/svg generator for your search input.</div></div><div class="bookmark-href"><img src="https://shipow.github.io/searchbox/favicon.ico" class="icon bookmark-icon"/>https://shipow.github.io/searchbox/</div></div></a></figure><ul id="04326f60-8665-4e5d-8159-6a940df381ab" class="bulleted-list"><li style="list-style-type:disc">Colección de animaciones para CSS</li></ul><figure id="f90e99d8-597f-4a62-b55d-05851446c3f5"><a href="https://cssfx.netlify.app/?ref=undesign" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CSSFX - Beautifully simple click-to-copy CSS effects</div><div class="bookmark-description">Browse a carefully crafted collection of loaders, hover effects, transitions, and other CSS effects to use in your next project. Effects are designed with an emphasis on fluidity, simplicity, and ease of use.</div></div><div class="bookmark-href"><img src="https://cssfx.netlify.app/favicon-16x16.png" class="icon bookmark-icon"/>https://cssfx.netlify.app/?ref=undesign</div></div><img src="https://cssfx.netlify.app/logo.png" class="bookmark-image"/></a></figure><ul id="9b9fafcb-8fc7-44ec-8e82-1c726becc0ac" class="bulleted-list"><li style="list-style-type:disc">Animador de SVG</li></ul><figure id="4d99cd98-14c2-434f-9d6b-99a7d6b1803a"><a href="https://svgartista.net/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">SVG Artista - SVG Drawing Animation Generator</div><div class="bookmark-description">SVG Artista is a free tool that helps you easily create amazing SVG drawing animations by animating stroke and fill properties of your SVG graphics.</div></div><div class="bookmark-href"><img src="https://svgartista.net/favicon.ico" class="icon bookmark-icon"/>https://svgartista.net/</div></div><img src="https://svgartista.net/svgartista-media.png" class="bookmark-image"/></a></figure><ul id="3961fcc0-0a64-46d4-9ddc-dc12a782f6b5" class="bulleted-list"><li style="list-style-type:disc">CSS Grid generator</li></ul><figure id="56931e9d-51fa-46f3-a007-cd7f3c8db93b"><a href="https://cssgr.id/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">cssgr.id | An interactive CSS Grid code tool and generator</div><div class="bookmark-description">Cssgr.id is an interactive tool to generate boilerplate code for CSS Grid layouts.</div></div><div class="bookmark-href"><img src="https://cssgr.id/favicon.ico" class="icon bookmark-icon"/>https://cssgr.id/</div></div></a></figure><ul id="701022b0-f844-4b07-ab5b-d4db4f17c884" class="bulleted-list"><li style="list-style-type:disc">Hero generator</li></ul><figure id="10f322d0-c285-448e-a544-f92c89f516b6"><a href="https://hero-generator.netlify.app/?ref=undesign" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The Hero Generator</div><div class="bookmark-description">Generates the code for a website header. I&#x27;ve had to implement the same hero for several years now, so like a good lazy programmer, I figured I&#x27;d automate it.</div></div><div class="bookmark-href"><img src="https://hero-generator.netlify.app/favicon.ico" class="icon bookmark-icon"/>https://hero-generator.netlify.app/?ref=undesign</div></div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hero-og.png" class="bookmark-image"/></a></figure><ul id="4bb6a827-5967-4b1a-b4b7-3a3bc7a35883" class="bulleted-list"><li style="list-style-type:disc">CSS Image filter generator</li></ul><figure id="c3dfbb59-aabc-4ac4-957c-75e5a27aadde"><a href="https://www.cssfiltergenerator.com/?ref=undesign" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CSSfiltergenerator.com</div><div class="bookmark-description">CSS Filter Generator produces CSS filters and mix-blend-mode overlay code using a graphical user interface.</div></div><div class="bookmark-href"><img src="https://www.cssfiltergenerator.com/favicon.ico" class="icon bookmark-icon"/>https://www.cssfiltergenerator.com/?ref=undesign</div></div><img src="http://cssfiltergenerator.com/img/simple.png" class="bookmark-image"/></a></figure><ul id="4c9c4b0a-6c23-4dd8-85e4-893633b823d6" class="bulleted-list"><li style="list-style-type:disc">Relearn CSS Layout </li></ul><figure id="89e56391-ecf9-4e81-b7c0-c15c1a4307fe"><a href="https://every-layout.dev/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Relearn CSS layout</div><div class="bookmark-description">If you find yourself wrestling with CSS layout, it&#x27;s likely you&#x27;re making decisions for browsers they should be making themselves. Through a series of simple, composable layouts, Every Layout will teach you how to better harness the built-in algorithms that power browsers and CSS.</div></div><div class="bookmark-href"><img src="https://every-layout.dev/images/favicon.png" class="icon bookmark-icon"/>https://every-layout.dev/?s=09</div></div><img src="https://every-layout.dev/images/card.png" class="bookmark-image"/></a></figure><ul id="a2ec3cd3-f10d-4cd9-b4ce-6ab852859937" class="bulleted-list"><li style="list-style-type:disc">Animatopy: Generador de animaciones</li></ul><figure id="a3eedeac-f90e-4763-ad2d-0eaeae680ac0"><a href="https://sarthology.github.io/Animatopy/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Animatopy - CSS Animation Snippets</div><div class="bookmark-description">Adding the whole animate.css file in your web-projects is a pain for many people. Here&#x27;s a quick and easy solution. Ready-to-use code snippets for all your animation needs!</div></div><div class="bookmark-href"><img src="https://sarthology.github.io/Animatopy/topy.ico" class="icon bookmark-icon"/>https://sarthology.github.io/Animatopy/</div></div><img src="https://i.imgur.com/8x6WDml.png" class="bookmark-image"/></a></figure><ul id="17037058-0ef8-4178-a375-8ca62867573d" class="bulleted-list"><li style="list-style-type:disc">Image hover effect library </li></ul><figure id="c13b796d-c6b6-4b71-8a62-c1dce0b6544a"><a href="http://imagehover.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Imagehover.css - A Pure CSS Image Hover Library</div><div class="bookmark-description">Imagehover.css is a lovingly crafted CSS library allowing you to easily implement scaleable image hover effects. Choose from over 40 hover effect classes from a CSS library weighing in at a minified size of only 19KB.</div></div><div class="bookmark-href"><img src="http://imagehover.io/user/themes/antimatter/images/favicon.png" class="icon bookmark-icon"/>http://imagehover.io/</div></div><img src="http://www.imagehover.io/imagehover-og.jpg" class="bookmark-image"/></a></figure><ul id="7c97a806-6715-4a5b-aca8-ecec000afa2c" class="bulleted-list"><li style="list-style-type:disc">CSS Grid Generator</li></ul><figure id="07c08181-24fd-4603-9f00-684affb2e36e"><a href="https://cssgrid-generator.netlify.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CSS Grid Generator</div></div><div class="bookmark-href"><img src="https://cssgrid-generator.netlify.app/favicon.ico" class="icon bookmark-icon"/>https://cssgrid-generator.netlify.app/</div></div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/og-cssgrid.jpg" class="bookmark-image"/></a></figure><ul id="95bdbe02-ff05-406e-b20f-a5f41d46e9cc" class="bulleted-list"><li style="list-style-type:disc">CSS Grid Cheatsheet</li></ul><figure id="c07fb59e-41dd-40f5-a2f5-92e98d8db4bf"><a href="https://grid.malven.co/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">GRID: A simple visual cheatsheet for CSS Grid Layout</div><div class="bookmark-description">Learn all about the properties available in CSS Grid Layout through simple visual examples.</div></div><div class="bookmark-href"><img src="https://grid.malven.co/favicon-16x16.png" class="icon bookmark-icon"/>https://grid.malven.co/</div></div><img src="http://grid.malven.co/android-chrome-256x256.png" class="bookmark-image"/></a></figure><ul id="9e7b36a8-6fdb-4552-a017-cd16c3735685" class="bulleted-list"><li style="list-style-type:disc">CSS Flex Cheatsheet </li></ul><figure id="fa1ffce3-e69a-42d2-909d-6c0ee0c4306b"><a href="https://flexbox.malven.co/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">FLEX: A simple visual cheatsheet for flexbox</div><div class="bookmark-description">Enables flex for all children. Establishes the main axis. Wraps items if they can&#x27;t all be made to fit on one line. Attempts to distribute extra space on the main axis. Determines how items are laid out on the cross axis. Only has an effect with more than one line of content.</div></div><div class="bookmark-href"><img src="https://flexbox.malven.co/favicon-16x16.png" class="icon bookmark-icon"/>https://flexbox.malven.co/</div></div><img src="http://flexbox.malven.co/android-chrome-256x256.png" class="bookmark-image"/></a></figure><ul id="9e691bf9-325f-48b6-b103-f25544616e2c" class="bulleted-list"><li style="list-style-type:disc">Generador de FLEXBOX</li></ul><figure id="270f0b9a-8218-455d-ac29-d492e804530e"><a href="https://codepen.io/smpnjn/pen/jOazqZE" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CSS Flexbox Generator</div><div class="bookmark-description">body { background: rgb(15 19 22); color: white; padding: 1rem 2rem; font-family: Inter, sans-serif; } h2 { font-variation-settings: &quot;wght&quot; 800; font-size: 1.75rem; flex-direction: row-reverse; display: flex; justify-content: flex-end; align-items: center; color: #ffb834; } p { font-size: 1.25rem; line-height: 2.5rem; margin-bottom: 2rem; text-decoration: none; color: #ffffffd9; max-width: 100%; } .example-flex {</div></div><div class="bookmark-href"><img src="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" class="icon bookmark-icon"/>https://codepen.io/smpnjn/pen/jOazqZE</div></div><img src="https://shots.codepen.io/smpnjn/pen/jOazqZE-512.jpg?version=1645313001" class="bookmark-image"/></a></figure><ul id="aefa36c9-07d6-45f8-890b-01472eaf5930" class="bulleted-list"><li style="list-style-type:disc">Make some waves </li></ul><figure id="bb5b164f-dc0b-44fe-98b1-4d7db89ec3cd"><a href="https://getwaves.io/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Get Waves - Create SVG waves for your next design</div><div class="bookmark-description">A free SVG wave generator to make unique SVG waves for your next web design. Choose a curve, adjust complexity, randomize!</div></div><div class="bookmark-href"><img src="https://getwaves.io/favicon-32x32.png?v=f13a1a2e88a9720e746d5561039d3f5f" class="icon bookmark-icon"/>https://getwaves.io/?s=09</div></div><img src="https://www.getwaves.io/static/getwaves-cover-ac8c651e2f1863b1e8df743f946fdf10.jpg" class="bookmark-image"/></a></figure><ul id="93e1f0fe-797d-4f32-922a-5a53dfc2ce3f" class="bulleted-list"><li style="list-style-type:disc">Blobmaker </li></ul><figure id="2ce93286-48b0-433c-bd76-5f1bc51b6614"><a href="https://www.blobmaker.app/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Blobmaker - Make organic SVG shapes for your next design</div><div class="bookmark-description">Blobmaker is a free generative design tool made with 💕 by z creative labs, to help you quickly create random, unique, and organic-looking SVG shapes. From landing pages to illustrations, blobs are everywhere! Creating smooth, organic-looking shapes can be difficult, especially when you need many different ones.</div></div><div class="bookmark-href"><img src="https://www.blobmaker.app/icons/icon-48x48.png?v=d2064a4d23cc375c9a373bc2d9f2aa35" class="icon bookmark-icon"/>https://www.blobmaker.app/?s=09</div></div><img src="https://www.blobmaker.app/static/blobmaker-cover-703617855c36334d464a0690d71f7a75.jpg" class="bookmark-image"/></a></figure><h2 id="7bb228e5-d7aa-4ef6-886b-7f1c0c18e2a7" class="">Imágenes</h2><p id="0b61cf0c-07e4-4443-87c9-20c9d02f29af" class="">
+</p><ul id="be8c689a-f847-4264-b010-fd35cb19f042" class="bulleted-list"><li style="list-style-type:disc">Borrar elementos de una imagen</li></ul><figure id="b2c42064-8fc4-49d9-ba5f-9756be3c0aff"><a href="https://cleanup.pictures/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Cleanup.pictures</div><div class="bookmark-description">Remove objects, people, text and defects from any picture for free. Create a clean background for a product picture 📸, re-design any items 👠, fill up some missing space for a youtube thumbnail 🎬, You can use it to iron your shirts 👕...etc!</div></div><div class="bookmark-href"><img src="https://cleanup.pictures/favicon.ico" class="icon bookmark-icon"/>https://cleanup.pictures/</div></div><img src="http://cleanup.pictures/preview.jpg" class="bookmark-image"/></a></figure><ul id="5527efc5-185e-4a86-b022-013a0287845f" class="bulleted-list"><li style="list-style-type:disc">Borrar el fondo de una imagen</li></ul><figure id="2b7d1f76-7525-44d7-ac9a-4491b0893467"><a href="https://www.erase.bg/en/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Remove Background From Images For Free - Erase.bg</div><div class="bookmark-description">Remove background from images of humans, animals or objects and download high-resolution images for free. You can also edit and resize images as you like.</div></div><div class="bookmark-href"><img src="https://www.erase.bg/static/media/favicon-32x32.f93b5da.png" class="icon bookmark-icon"/>https://www.erase.bg/en/</div></div><img src="https://cdn-1.erase.bg/assets/erasebg_background.jpg" class="bookmark-image"/></a></figure><ul id="ce4d6d93-4231-4237-ba77-939c011872c4" class="bulleted-list"><li style="list-style-type:disc">Placeholder image</li></ul><figure id="c2050518-3857-4765-b51f-aeacf08c79b5"><a href="https://fakeimg.pl/?ref=devresourc.es" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Fake images please?</div><div class="bookmark-description">When designing websites, you may not have the images you need at first. But you already know the sizes and inserting some placeholders can help you better seeing the layout. Don&#x27;t waste your time making dummy images for your mockup or wireframe. Fakeimg.pl is a little tool that generates images with an URL.</div></div><div class="bookmark-href"><img src="https://fakeimg.pl/favicon.ico" class="icon bookmark-icon"/>https://fakeimg.pl/?ref=devresourc.es</div></div><img src="https://fakeimg.pl/440x320/282828/eae0d0/?retina=1" class="bookmark-image"/></a></figure><ul id="c179bc1c-4f01-43bb-a712-fb07cd9b3e34" class="bulleted-list"><li style="list-style-type:disc">Optimizador de PNG</li></ul><figure id="7596402f-dfa2-4271-be99-bfb12e346d9a"><a href="https://tinypng.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">TinyPNG - Compress WebP, PNG and JPEG images intelligently</div><div class="bookmark-description">Excellent question! Let me give you a side by side comparison. Below are two photos of my cousin. The left image is saved as 24-bit PNG directly from Adobe Photoshop. On the right is the same image processed by TinyPNG. Spot any difference? Excellent question!</div></div><div class="bookmark-href"><img src="https://tinypng.com/images/favicon.ico" class="icon bookmark-icon"/>https://tinypng.com/</div></div><img src="https://tinypng.com/images/social/website.jpg" class="bookmark-image"/></a></figure><ul id="d1c800b4-3953-45a4-afba-2e81fddb9f67" class="bulleted-list"><li style="list-style-type:disc">Compress PNG</li></ul><figure id="b2416aa0-7851-4520-9faa-0e141c5954b1"><a href="https://compresspng.com/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Compress PNG Images Online</div><div class="bookmark-description">PNG compression and optimization tool to compress PNG images into PNG-8 format with transparency support.</div></div><div class="bookmark-href"><img src="https://compresspng.com/images/compresspng/favicon.png" class="icon bookmark-icon"/>https://compresspng.com/?s=09</div></div><img src="https://compresspng.com/images/compresspng/icon.png" class="bookmark-image"/></a></figure><ul id="dab57f5d-676c-4143-a663-3585fcb8e7b5" class="bulleted-list"><li style="list-style-type:disc">SVG Emojis</li></ul><figure id="616ab3c6-4507-46e3-869c-e1ce5ff95391"><a href="https://sensa.co/emoji/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Sensa Emoji · Free, vector, and open-source emoji set</div><div class="bookmark-description">We have illustrated a huge set of emojis, all vector-made from the begining. A PNG and SVG set ready for Figma, Sketch, Illustrator and any design tool you use. A standard open-source set that fits in your projects.</div></div><div class="bookmark-href"><img src="https://sensa.co/emoji/favicon.ico" class="icon bookmark-icon"/>https://sensa.co/emoji/</div></div><img src="https://sensa.co/emoji/images/emoji-twitter-card.png" class="bookmark-image"/></a></figure><h2 id="6e1fcd64-af37-44dd-ad21-9e74dd9a8041" class="">Recursos para JS</h2><p id="82d2fd83-d695-4a95-bdbd-b270e82d528b" class="">
+</p><ul id="a4115d59-96d3-47c4-9ef3-5fe59caebda5" class="bulleted-list"><li style="list-style-type:disc">Tutorial de JS</li></ul><figure id="b65c79b5-55b9-4945-8564-7cdf294c2b5b"><a href="https://es.javascript.info/intro" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Una introducción a JavaScript</div><div class="bookmark-description">Veamos qué tiene de especial JavaScript, qué podemos lograr con este lenguaje y qué otras tecnologías se integran bien con él. JavaScript fue creado para &quot;dar vida a las páginas web&quot;. Los programas en este lenguaje se llaman scripts. Se pueden escribir directamente en el HTML de una página web y ejecutarse automáticamente a medida que se carga la página.</div></div><div class="bookmark-href"><img src="https://es.javascript.info/img/favicon/favicon.png" class="icon bookmark-icon"/>https://es.javascript.info/intro</div></div><img src="https://es.javascript.info/img/site_preview_en_1200x630.png" class="bookmark-image"/></a></figure><ul id="579f14c3-b132-4ad3-8522-8d7d5f3feada" class="bulleted-list"><li style="list-style-type:disc">Búsqueda de Operadores</li></ul><figure id="3ea58266-721e-49dd-b3f7-649a9373b39e"><a href="https://www.joshwcomeau.com/operator-lookup/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Operator Lookup - Search JavaScript operators</div><div class="bookmark-description">Friendly tutorials for developers. Focus on React, CSS, Animation, and more!</div></div><div class="bookmark-href"><img src="https://www.joshwcomeau.com/assets/favicon.png?v=4" class="icon bookmark-icon"/>https://www.joshwcomeau.com/operator-lookup/</div></div><img src="https://www.joshwcomeau.com/images/og-operator-lookup.png" class="bookmark-image"/></a></figure><p id="2e41bb16-85fc-425a-b9dc-685f31f38150" class="">
+</p><h2 id="4969a869-3e15-41ef-8f3c-4c56b976e471" class="">Snippets</h2><p id="b6ad7ae3-f2bb-4fbb-ac1f-ab721888aa01" class="">
+</p><figure id="5f568f48-dde4-4fae-bf73-462ef41e2465"><a href="https://web.dev/patterns/layout/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Layout patterns</div><div class="bookmark-description">We want to hear from you! We are looking for web developers to participate in user research, product testing, discussion groups and more. Apply now to join our WebDev Insights Community. A collection of layout patterns built using modern CSS APIs that will help you build common interfaces such as cards, dynamic grid areas, and full-page layouts.</div></div><div class="bookmark-href"><img src="https://web.dev/images/favicon.ico" class="icon bookmark-icon"/>https://web.dev/patterns/layout/?s=09</div></div><img src="https://web-dev.imgix.net/image/HodOHWjMnbNw56hvNASHWSgZyAf2/PRyD1Ad1GtT6IZLqWtu1.svg?auto=format&amp;fit=max&amp;w=1200&amp;fm=auto" class="bookmark-image"/></a></figure><figure id="62abb2a4-12b1-4ae4-b049-2a18cba54a0e"><a href="https://bootsnipp.com/?s=09" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">HTML Snippets for Twitter Boostrap framework : Bootsnipp.com</div><div class="bookmark-description">A design element gallery for web designers and web developers. Find snippets using HTML, CSS, Javascript, jQuery, and Bootstrap.</div></div><div class="bookmark-href"><img src="https://d2d3qesrx8xj6s.cloudfront.net/favicon.ico" class="icon bookmark-icon"/>https://bootsnipp.com/?s=09</div></div><img src="https://bootsnipp.com/img/logo.jpg" class="bookmark-image"/></a></figure><h2 id="2cf007c4-6997-449e-ac75-ae341a69aca8" class="">Textos</h2><ul id="4f9e7e75-44c5-44c6-9fb2-e5c7b81dd315" class="bulleted-list"><li style="list-style-type:disc">Generador de escala tipográfica</li></ul><figure id="a302945b-c3fe-4fb3-8714-540d481b16c9"><a href="https://type-scale.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">A Visual Type Scale</div><div class="bookmark-description">What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction. When it came near enough he perceived that it was not grass; there were no blades, but only purple roots.</div></div><div class="bookmark-href"><img src="https://type-scale.com/favicon.ico" class="icon bookmark-icon"/>https://type-scale.com/</div></div></a></figure><ul id="929eecf5-4d30-40e2-9c13-df4b30ff923c" class="bulleted-list"><li style="list-style-type:disc">Pairing de fuentes</li></ul><figure id="82066b96-6fff-4dab-9bb0-8e2e6723edbd"><a href="https://www.fontsinthewild.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://www.fontsinthewild.com/</div></div></a></figure></div></article></body></html>
